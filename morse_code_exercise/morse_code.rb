@@ -40,20 +40,16 @@ morse_dict = {
 	"0" => "-----"
 }
 output_morse = []
+output_morse_split = []
+output_translation =[]
 
+puts ""
 puts "What text would you like to convert to Morse Code?"
 input_string = gets.chomp.downcase
 
 
-# binding.pry
 input_string.split("").each do |letter|
-  # binding.pry
-
-  if letter == " "
-    output_morse << letter
-  else
-    output_morse << morse_dict["#{letter}"]
-  end
+    output_morse << morse_dict[letter]
 end
 
-print "Your Code Is: #{output_morse.join(" ")}"
+puts "Your Code Is: #{output_morse.join}"
